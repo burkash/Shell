@@ -1,4 +1,3 @@
-//
 /***
  *     ________  ________  ________  ________  ___  ___  _______   ___       ___
  *    |\   __  \|\_____  \|\   __  \|\   ____\|\  \|\  \|\  ___ \ |\  \     |\  \
@@ -11,16 +10,16 @@
  *
  *
  */
-// Created by Burhan Hošić
-//  - - - Quick Manual For Commands in use - - -
+
+// Created by Burhan Hošić and Abdulkadir Akay
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <signal.h>
 #include <ncurses.h>
-
 
 #define ANSI_COLOR_BRIGHT_BLUE    "\x1b[94m"
 #define ANSI_COLOR_BLUE    "\x1b[34m"
@@ -28,6 +27,8 @@
 #define ANSI_COLOR_RESET "\x1b[0m"
 #define MAX_COMMAND_LENGTH 100
 #define MAX_ARGUMENTS 10
+
+
 
 // Function to read user input
 char *read_input() {
@@ -156,6 +157,5 @@ int main() {
         free(input);
         free(args);
     }
-
     return 0;
 }
